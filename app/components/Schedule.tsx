@@ -3,39 +3,50 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Reveal from "./Reveal";
+import { getArtist } from "../data/artists";
 
-const DAYS = [
+type SetRow = { time: string; artist: string; stage: string };
+
+/** Artist rows read their time/day/stage from the shared artists data,
+ * so Schedule and Lineup can never drift apart. */
+function artistSet(slug: string): SetRow {
+  const a = getArtist(slug);
+  if (!a) throw new Error(`Unknown artist slug in schedule: ${slug}`);
+  return { time: a.time, artist: a.name, stage: a.stage };
+}
+
+const DAYS: { id: string; label: string; sets: SetRow[] }[] = [
   {
     id: "fri",
     label: "Fri 14 Aug",
     sets: [
-      { time: "16:00", artist: "Kairo", stage: "Pulse Stage" },
-      { time: "18:30", artist: "Nova Rey", stage: "Aurora Stage" },
+      artistSet("kairo"),
       { time: "21:00", artist: "Opening ceremony + light show", stage: "All stages" },
+      artistSet("nova-rey"),
     ],
   },
   {
     id: "sat",
     label: "Sat 15 Aug",
     sets: [
-      { time: "15:00", artist: "Luna Mara", stage: "Horizon Stage" },
-      { time: "18:00", artist: "Felix Brandt", stage: "Aurora Stage" },
-      { time: "20:30", artist: "Sofia Lane", stage: "Aurora Stage" },
+      artistSet("luna-mara"),
+      artistSet("felix-brandt"),
+      artistSet("sofia-lane"),
     ],
   },
   {
     id: "sun",
     label: "Sun 16 Aug",
     sets: [
-      { time: "14:00", artist: "Amara Sol", stage: "Sunset Stage" },
       { time: "17:30", artist: "Closing sets across 5 stages", stage: "All stages" },
+      artistSet("amara-sol"),
       { time: "21:00", artist: "Finale light show", stage: "Aurora Stage" },
     ],
   },
-] as const;
+];
 
 export default function Schedule() {
-  const [active, setActive] = useState<(typeof DAYS)[number]["id"]>("sat");
+  const [active, setActive] = useState<string>("sat");
   const day = DAYS.find((d) => d.id === active) ?? DAYS[0];
 
   return (

@@ -112,7 +112,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${anton.variable} ${inter.variable}`}>
-      <body className="bg-wine font-sans text-cream antialiased">
+      <body className="bg-[#20100c] font-sans text-cream antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -28,7 +28,7 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled || open
-          ? "bg-wine/90 shadow-lg shadow-black/30 backdrop-blur-md"
+          ? "bg-[#2a0a0a]/90 shadow-lg shadow-black/30 backdrop-blur-md"
           : "bg-gradient-to-b from-black/50 to-transparent"
       }`}
     >

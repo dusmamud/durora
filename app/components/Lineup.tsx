@@ -1,13 +1,6 @@
-import { Disc3 } from "lucide-react";
+import Image from "next/image";
 import Reveal from "./Reveal";
-
-const ARTISTS = [
-  { name: "Nova Rey", genre: "Melodic Techno", day: "Fri 14 Aug", stage: "Aurora Stage" },
-  { name: "Kairo", genre: "House", day: "Fri 14 Aug", stage: "Pulse Stage" },
-  { name: "Luna Mara", genre: "Dream Pop", day: "Sat 15 Aug", stage: "Horizon Stage" },
-  { name: "Felix Brandt", genre: "Electro", day: "Sat 15 Aug", stage: "Aurora Stage" },
-  { name: "Amara Sol", genre: "Soul / R&B", day: "Sun 16 Aug", stage: "Sunset Stage" },
-];
+import { HEADLINER, LINEUP } from "../data/artists";
 
 export default function Lineup() {
   return (
@@ -27,35 +20,60 @@ export default function Lineup() {
         </Reveal>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <Reveal className="rounded-3xl bg-gradient-to-br from-ember to-wine-soft p-7 sm:col-span-2 lg:row-span-1">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-glow">
-              Headliner — Sat 15 Aug
-            </p>
-            <p className="mt-2 font-display text-4xl text-cream sm:text-5xl">
-              SOFIA LANE
-            </p>
-            <p className="mt-2 text-cream/85">
-              Indie Pop / Soul — Aurora Stage, sunset set.
-            </p>
-            <a
-              href="#artist"
-              className="mt-5 inline-block rounded-full bg-cream px-5 py-2.5 text-sm font-bold text-ember-deep transition-transform hover:scale-[1.03]"
-            >
-              Meet Sofia →
-            </a>
+          {/* Headliner: large portrait card */}
+          <Reveal className="sm:col-span-2">
+            <article className="group relative min-h-[420px] overflow-hidden rounded-3xl transition-transform duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50">
+              <Image
+                src={HEADLINER.portrait}
+                alt={`${HEADLINER.name} — ${HEADLINER.genre}`}
+                fill
+                sizes="(max-width: 1024px) 100vw, 66vw"
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-7">
+                <p className="text-xs font-bold uppercase tracking-[0.3em] text-glow">
+                  Headliner — {HEADLINER.day}
+                </p>
+                <p className="mt-2 font-display text-4xl text-cream sm:text-5xl">
+                  {HEADLINER.name.toUpperCase()}
+                </p>
+                <p className="mt-2 text-cream/85">
+                  {HEADLINER.genre} — {HEADLINER.stage}, sunset set.
+                </p>
+                <a
+                  href="#artist"
+                  className="mt-5 inline-block rounded-full bg-cream px-5 py-2.5 text-sm font-bold text-ember-deep transition-transform hover:scale-[1.03]"
+                >
+                  Meet Sofia →
+                </a>
+              </div>
+            </article>
           </Reveal>
 
-          {ARTISTS.map((a, i) => (
-            <Reveal key={a.name} delay={0.05 * (i + 1)}>
-              <article className="group h-full rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition-colors hover:border-ember/60">
-                <Disc3 className="h-7 w-7 text-ember transition-transform duration-500 group-hover:rotate-180" aria-hidden />
-                <h3 className="mt-4 font-display text-2xl tracking-wide text-cream">
-                  {a.name.toUpperCase()}
-                </h3>
-                <p className="mt-1 text-sm font-semibold text-glow">{a.genre}</p>
-                <p className="mt-3 text-sm text-cream/65">
-                  {a.day} · {a.stage}
-                </p>
+          {LINEUP.map((a, i) => (
+            <Reveal key={a.slug} delay={0.05 * (i + 1)} className="h-full">
+              <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] transition-all duration-500 hover:-translate-y-1 hover:border-ember/60 hover:shadow-2xl hover:shadow-black/50">
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <Image
+                    src={a.portrait}
+                    alt={`${a.name} — ${a.genre}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-display text-2xl tracking-wide text-cream">
+                    {a.name.toUpperCase()}
+                  </h3>
+                  <p className="mt-1 text-sm font-semibold text-glow">
+                    {a.genre}
+                  </p>
+                  <p className="mt-3 text-sm text-cream/65">
+                    {a.day} · {a.stage} · {a.time}
+                  </p>
+                </div>
               </article>
             </Reveal>
           ))}
