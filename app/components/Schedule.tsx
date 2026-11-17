@@ -1,0 +1,103 @@
+"use client";
+
+import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import Reveal from "./Reveal";
+
+const DAYS = [
+  {
+    id: "fri",
+    label: "Fri 14 Aug",
+    sets: [
+      { time: "16:00", artist: "Kairo", stage: "Pulse Stage" },
+      { time: "18:30", artist: "Nova Rey", stage: "Aurora Stage" },
+      { time: "21:00", artist: "Opening ceremony + light show", stage: "All stages" },
+    ],
+  },
+  {
+    id: "sat",
+    label: "Sat 15 Aug",
+    sets: [
+      { time: "15:00", artist: "Luna Mara", stage: "Horizon Stage" },
+      { time: "18:00", artist: "Felix Brandt", stage: "Aurora Stage" },
+      { time: "20:30", artist: "Sofia Lane", stage: "Aurora Stage" },
+    ],
+  },
+  {
+    id: "sun",
+    label: "Sun 16 Aug",
+    sets: [
+      { time: "14:00", artist: "Amara Sol", stage: "Sunset Stage" },
+      { time: "17:30", artist: "Closing sets across 5 stages", stage: "All stages" },
+      { time: "21:00", artist: "Finale light show", stage: "Aurora Stage" },
+    ],
+  },
+] as const;
+
+export default function Schedule() {
+  const [active, setActive] = useState<(typeof DAYS)[number]["id"]>("sat");
+  const day = DAYS.find((d) => d.id === active) ?? DAYS[0];
+
+  return (
+    <section id="schedule" className="scroll-mt-20 bg-wine-deep px-4 py-16 sm:px-6 sm:py-24">
+      <div className="mx-auto max-w-6xl">
+        <Reveal>
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-ember">
+            Schedule
+          </p>
+          <h2 className="font-display text-4xl leading-none text-cream sm:text-5xl">
+            WHEN &amp; WHERE
+          </h2>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <div className="mt-8 flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Festival days">
+            {DAYS.map((d) => (
+              <button
+                key={d.id}
+                type="button"
+                role="tab"
+                aria-selected={active === d.id}
+                onClick={() => setActive(d.id)}
+                className={`whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-bold transition-colors ${
+                  active === d.id
+                    ? "bg-ember text-white"
+                    : "border border-white/20 text-cream/80 hover:border-glow hover:text-glow"
+                }`}
+              >
+                {d.label}
+              </button>
+            ))}
+          </div>
+
+          <AnimatePresence mode="wait">
+            <motion.ul
+              key={day.id}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.25 }}
+              className="mt-6 divide-y divide-white/10 rounded-3xl border border-white/10 bg-white/[0.03]"
+            >
+              {day.sets.map((s) => (
+                <li key={`${s.time}-${s.artist}`} className="flex flex-col gap-1 px-5 py-4 sm:flex-row sm:items-center sm:gap-6 sm:px-7">
+                  <span className="w-16 shrink-0 font-display text-xl text-glow">
+                    {s.time}
+                  </span>
+                  <span className="flex-1 text-base font-semibold text-cream">
+                    {s.artist}
+                  </span>
+                  <span className="text-sm text-cream/60">{s.stage}</span>
+                </li>
+              ))}
+            </motion.ul>
+          </AnimatePresence>
+          <p className="mt-4 text-sm text-cream/55">
+            Times are indicative — the full timetable is published one week
+            before the festival.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
