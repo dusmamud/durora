@@ -3,51 +3,11 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Reveal from "./Reveal";
-import { getArtist } from "../data/artists";
-
-type SetRow = { time: string; artist: string; stage: string };
-
-/** Artist rows read their time/day/stage from the shared artists data,
- * so Schedule and Lineup can never drift apart. */
-function artistSet(slug: string): SetRow {
-  const a = getArtist(slug);
-  if (!a) throw new Error(`Unknown artist slug in schedule: ${slug}`);
-  return { time: a.time, artist: a.name, stage: a.stage };
-}
-
-const DAYS: { id: string; label: string; sets: SetRow[] }[] = [
-  {
-    id: "fri",
-    label: "Fri 14 Aug",
-    sets: [
-      artistSet("kairo"),
-      { time: "21:00", artist: "Opening ceremony + light show", stage: "All stages" },
-      artistSet("nova-rey"),
-    ],
-  },
-  {
-    id: "sat",
-    label: "Sat 15 Aug",
-    sets: [
-      artistSet("luna-mara"),
-      artistSet("felix-brandt"),
-      artistSet("sofia-lane"),
-    ],
-  },
-  {
-    id: "sun",
-    label: "Sun 16 Aug",
-    sets: [
-      { time: "17:30", artist: "Closing sets across 5 stages", stage: "All stages" },
-      artistSet("amara-sol"),
-      { time: "21:00", artist: "Finale light show", stage: "Aurora Stage" },
-    ],
-  },
-];
+import { SCHEDULE_DAYS } from "../data/schedule";
 
 export default function Schedule() {
   const [active, setActive] = useState<string>("sat");
-  const day = DAYS.find((d) => d.id === active) ?? DAYS[0];
+  const day = SCHEDULE_DAYS.find((d) => d.id === active) ?? SCHEDULE_DAYS[0];
 
   return (
     <section id="schedule" className="scroll-mt-20 bg-wine-deep px-4 py-16 sm:px-6 sm:py-24">
@@ -63,7 +23,7 @@ export default function Schedule() {
 
         <Reveal delay={0.1}>
           <div className="mt-8 flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Festival days">
-            {DAYS.map((d) => (
+            {SCHEDULE_DAYS.map((d) => (
               <button
                 key={d.id}
                 type="button"
