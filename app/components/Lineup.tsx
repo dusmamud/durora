@@ -28,7 +28,7 @@ export default function Lineup() {
                 alt={`${HEADLINER.name} — ${HEADLINER.genre}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 66vw"
-                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-7">
