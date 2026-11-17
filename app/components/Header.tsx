@@ -6,11 +6,15 @@ import { AnimatePresence, motion } from "motion/react";
 import { Menu, Ticket, X } from "lucide-react";
 
 const NAV = [
-  { label: "About", href: "#about" },
-  { label: "Artist", href: "#artist" },
-  { label: "Lineup", href: "#lineup" },
-  { label: "Tickets", href: "#tickets" },
-  { label: "Place", href: "#place" },
+  { label: "About", href: "/#about" },
+  { label: "Lineup", href: "/lineup" },
+  { label: "Schedule", href: "/schedule" },
+  { label: "Tickets", href: "/tickets" },
+  { label: "Venue", href: "/venue" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Info", href: "/info" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -34,19 +38,19 @@ export default function Header() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link
-          href="#top"
+          href="/"
           className="font-display text-2xl tracking-[0.18em] text-cream"
-          aria-label="Durora — back to top"
+          aria-label="Durora — home"
         >
           DUR<span className="text-ember">O</span>RA
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-5 lg:flex" aria-label="Primary">
           {NAV.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-semibold tracking-wide text-cream/85 transition-colors hover:text-glow"
+              className="text-[13px] font-semibold tracking-wide text-cream/85 transition-colors hover:text-glow"
             >
               {item.label}
             </Link>
@@ -55,7 +59,7 @@ export default function Header() {
 
         <div className="flex items-center gap-2">
           <Link
-            href="#tickets"
+            href="/tickets"
             className="hidden items-center gap-2 rounded-full bg-ember px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-ember-deep sm:inline-flex"
           >
             <Ticket className="h-4 w-4" aria-hidden />
@@ -66,7 +70,7 @@ export default function Header() {
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-cream transition-colors hover:bg-white/10 md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-cream transition-colors hover:bg-white/10 lg:hidden"
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -80,7 +84,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="border-t border-white/10 bg-wine/95 px-4 pb-6 pt-2 backdrop-blur-md md:hidden"
+            className="border-t border-white/10 bg-wine/95 px-4 pb-6 pt-2 backdrop-blur-md lg:hidden"
             aria-label="Mobile"
           >
             {NAV.map((item) => (
@@ -94,7 +98,7 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="#tickets"
+              href="/tickets"
               onClick={() => setOpen(false)}
               className="mt-4 flex items-center justify-center gap-2 rounded-full bg-ember px-4 py-3 text-base font-bold text-white"
             >

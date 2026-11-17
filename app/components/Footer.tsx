@@ -79,12 +79,17 @@ export default function Footer() {
             </p>
             <ul className="mt-4 space-y-2.5 text-sm font-semibold">
               {[
-                ["About", "#about"],
-                ["Lineup", "#lineup"],
-                ["Sofia Lane", "#artist"],
-                ["Schedule", "#schedule"],
-                ["Tickets", "#tickets"],
-                ["Place", "#place"],
+                ["About", "/#about"],
+                ["Lineup", "/lineup"],
+                ["Schedule", "/schedule"],
+                ["Tickets", "/tickets"],
+                ["Venue", "/venue"],
+                ["Gallery", "/gallery"],
+                ["Info", "/info"],
+                ["FAQ", "/faq"],
+                ["Contact", "/contact"],
+                ["Terms", "/terms"],
+                ["Privacy", "/privacy"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <Link href={href} className="text-cream/80 transition-colors hover:text-glow">
