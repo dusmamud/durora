@@ -40,7 +40,7 @@ export const EXTENDED_FAQ: FaqItem[] = [
   },
   {
     q: "Is the festival accessible?",
-    a: "Yes. Tempelhofer Feld is flat, open ground. There are accessible viewing platforms at the Aurora and Sunset stages, step-free entry lanes, accessible toilets, and a dedicated assistance team. Email us in advance so we can reserve a platform spot.",
+    a: "Yes. Tempelhofer Feld is flat, open ground. There are accessible viewing platforms at the Durora and Sunset stages, step-free entry lanes, accessible toilets, and a dedicated assistance team. Email us in advance so we can reserve a platform spot.",
   },
   {
     q: "Can I pay by card on site?",

@@ -55,7 +55,7 @@ export default function ArtistSpotlight() {
           alt="Sofia Lane wearing headphones, warm orange light"
           fill
           sizes="100vw"
-          className="object-cover object-top"
+          className="object-cover object-[center_28%]"
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/75" />

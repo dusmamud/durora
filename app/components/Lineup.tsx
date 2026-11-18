@@ -15,7 +15,7 @@ export default function Lineup() {
           </h2>
           <p className="mt-3 max-w-xl text-cream/75">
             A first look at the weekend. Sofia Lane headlines Sunday night on
-            the Aurora Stage — the full lineup drops soon.
+            the Durora Stage — the full lineup drops soon.
           </p>
         </Reveal>
 

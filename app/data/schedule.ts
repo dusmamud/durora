@@ -7,7 +7,7 @@ export type ScheduleDay = { id: string; label: string; sets: SetRow[] };
 /** The five Durora stages. Four host named artists; Grove Stage hosts
  * the closing sets and daytime programme across the weekend. */
 export const STAGES = [
-  "Aurora Stage",
+  "Durora Stage",
   "Pulse Stage",
   "Horizon Stage",
   "Sunset Stage",
@@ -58,7 +58,7 @@ export const SCHEDULE_DAYS: ScheduleDay[] = [
         stage: "All stages",
       },
       artistSet("amara-sol"),
-      { time: "21:00", artist: "Finale light show", stage: "Aurora Stage" },
+      { time: "21:00", artist: "Finale light show", stage: "Durora Stage" },
     ],
   },
 ];

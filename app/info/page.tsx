@@ -47,7 +47,7 @@ const SECTIONS = [
   {
     icon: Accessibility,
     title: "Accessibility",
-    body: "Tempelhofer Feld is flat, open ground. Accessible viewing platforms at the Aurora and Sunset stages, step-free entry lanes, accessible toilets and a dedicated assistance team. Email us in advance to reserve a platform spot.",
+    body: "Tempelhofer Feld is flat, open ground. Accessible viewing platforms at the Durora and Sunset stages, step-free entry lanes, accessible toilets and a dedicated assistance team. Email us in advance to reserve a platform spot.",
   },
   {
     icon: Users,
@@ -62,7 +62,7 @@ const SECTIONS = [
   {
     icon: ShieldAlert,
     title: "Safety & lost & found",
-    body: "First aid points at the main gate and beside the Aurora Stage. Lost property goes to the info point at the main gate; after the festival, email hello@durora.live with a description. In an emergency, follow staff directions and the marked exit routes.",
+    body: "First aid points at the main gate and beside the Durora Stage. Lost property goes to the info point at the main gate; after the festival, email hello@durora.live with a description. In an emergency, follow staff directions and the marked exit routes.",
   },
 ];
 

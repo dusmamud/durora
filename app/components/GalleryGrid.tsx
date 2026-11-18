@@ -9,7 +9,7 @@ import Reveal from "./Reveal";
  * thumbnails use the resized `src` (1024w). crowd/venue have no separate
  * full file — their resized files are already wide enough for the lightbox. */
 const PHOTOS: { src: string; full?: string; alt: string; caption: string }[] = [
-  { src: "/images/gallery-night-crowd.webp", full: "/images/full/gallery-night-crowd.webp", alt: "Night crowd under the lights at Durora", caption: "Night crowd — Aurora Stage" },
+  { src: "/images/gallery-night-crowd.webp", full: "/images/full/gallery-night-crowd.webp", alt: "Night crowd under the lights at Durora", caption: "Night crowd — Durora Stage" },
   { src: "/images/gallery-daytime-crowd.webp", full: "/images/full/gallery-daytime-crowd.webp", alt: "Daytime crowd dancing at Durora", caption: "Daytime crowd" },
   { src: "/images/gallery-stage-closeup.webp", full: "/images/full/gallery-stage-closeup.webp", alt: "Close-up of a Durora stage at night", caption: "Stage close-up" },
   { src: "/images/gallery-ferris-sunset.webp", full: "/images/full/gallery-ferris-sunset.webp", alt: "Ferris wheel at sunset over the festival", caption: "Sunset over the field" },
