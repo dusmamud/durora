@@ -5,11 +5,14 @@ import Image from "next/image";
 import { X } from "lucide-react";
 import Reveal from "./Reveal";
 
-const PHOTOS = [
-  { src: "/images/gallery-night-crowd.webp", alt: "Night crowd under the lights at Durora", caption: "Night crowd — Aurora Stage" },
-  { src: "/images/gallery-daytime-crowd.webp", alt: "Daytime crowd dancing at Durora", caption: "Daytime crowd" },
-  { src: "/images/gallery-stage-closeup.webp", alt: "Close-up of a Durora stage at night", caption: "Stage close-up" },
-  { src: "/images/gallery-ferris-sunset.webp", alt: "Ferris wheel at sunset over the festival", caption: "Sunset over the field" },
+/** Gallery photos. `full` is the full-size file the lightbox loads;
+ * thumbnails use the resized `src` (1024w). crowd/venue have no separate
+ * full file — their resized files are already wide enough for the lightbox. */
+const PHOTOS: { src: string; full?: string; alt: string; caption: string }[] = [
+  { src: "/images/gallery-night-crowd.webp", full: "/images/full/gallery-night-crowd.webp", alt: "Night crowd under the lights at Durora", caption: "Night crowd — Aurora Stage" },
+  { src: "/images/gallery-daytime-crowd.webp", full: "/images/full/gallery-daytime-crowd.webp", alt: "Daytime crowd dancing at Durora", caption: "Daytime crowd" },
+  { src: "/images/gallery-stage-closeup.webp", full: "/images/full/gallery-stage-closeup.webp", alt: "Close-up of a Durora stage at night", caption: "Stage close-up" },
+  { src: "/images/gallery-ferris-sunset.webp", full: "/images/full/gallery-ferris-sunset.webp", alt: "Ferris wheel at sunset over the festival", caption: "Sunset over the field" },
   { src: "/images/crowd.webp", alt: "Festival crowd with hands in the air", caption: "The crowd" },
   { src: "/images/venue.webp", alt: "Tempelhofer Feld, the Durora festival site", caption: "Tempelhofer Feld" },
 ];
@@ -55,6 +58,7 @@ export default function GalleryGrid() {
                     src={p.src}
                     alt={p.alt}
                     fill
+                    fetchPriority={i === 0 ? "high" : "auto"}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
@@ -94,7 +98,7 @@ export default function GalleryGrid() {
           >
             <div className="relative aspect-[4/3] max-h-[78vh] w-full overflow-hidden rounded-3xl">
               <Image
-                src={PHOTOS[active].src}
+                src={PHOTOS[active].full ?? PHOTOS[active].src}
                 alt={PHOTOS[active].alt}
                 fill
                 sizes="100vw"
