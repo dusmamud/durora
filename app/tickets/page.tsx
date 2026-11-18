@@ -7,7 +7,7 @@ import TicketPicker from "../components/TicketPicker";
 export const metadata: Metadata = {
   title: "Tickets",
   description:
-    "Durora 2026 tickets: Day Pass €69, Weekend Pass €149, VIP €249. Berlin, 14–16 August. Demo checkout — no real payment, nothing is booked.",
+    "Durora 2027 tickets: Day Pass €69, Weekend Pass €149, VIP €249. Berlin, 14–16 August. Demo checkout — no real payment, nothing is booked.",
 };
 
 export default function TicketsPage() {
@@ -26,7 +26,7 @@ export default function TicketsPage() {
             <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
               <h2 className="font-display text-xl text-cream">REFUNDS</h2>
               <p className="mt-2 text-sm leading-relaxed text-cream/70">
-                Refunds are available until 31 July 2026. Tickets are
+                Refunds are available until 31 July 2027. Tickets are
                 transferable to another person up to 7 days before the
                 festival.
               </p>

@@ -6,7 +6,7 @@ import Reveal from "./Reveal";
 import { SCHEDULE_DAYS } from "../data/schedule";
 
 export default function Schedule() {
-  const [active, setActive] = useState<string>("sat");
+  const [active, setActive] = useState<string>("sun");
   const day = SCHEDULE_DAYS.find((d) => d.id === active) ?? SCHEDULE_DAYS[0];
 
   return (

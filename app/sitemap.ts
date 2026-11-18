@@ -4,7 +4,7 @@ import { ARTISTS } from "./data/artists";
 export const dynamic = "force-static";
 
 const BASE = "https://durora.pages.dev";
-const LAST_MODIFIED = new Date("2026-11-17");
+const LAST_MODIFIED = new Date(); // build date
 
 const ROUTES: { path: string; priority: number }[] = [
   { path: "/", priority: 1 },

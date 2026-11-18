@@ -1,7 +1,7 @@
 const ITEMS = [
   "Durora",
   "Berlin",
-  "14–16 August 2026",
+  "14–16 August 2027",
   "60+ Artists",
   "5 Stages",
   "20,000 Guests",

@@ -27,8 +27,8 @@ function artistSet(slug: string): SetRow {
  * timetable is published one week before the festival. */
 export const SCHEDULE_DAYS: ScheduleDay[] = [
   {
-    id: "fri",
-    label: "Fri 14 Aug",
+    id: "sat",
+    label: "Sat 14 Aug",
     sets: [
       artistSet("kairo"),
       {
@@ -40,8 +40,8 @@ export const SCHEDULE_DAYS: ScheduleDay[] = [
     ],
   },
   {
-    id: "sat",
-    label: "Sat 15 Aug",
+    id: "sun",
+    label: "Sun 15 Aug",
     sets: [
       artistSet("luna-mara"),
       artistSet("felix-brandt"),
@@ -49,8 +49,8 @@ export const SCHEDULE_DAYS: ScheduleDay[] = [
     ],
   },
   {
-    id: "sun",
-    label: "Sun 16 Aug",
+    id: "mon",
+    label: "Mon 16 Aug",
     sets: [
       {
         time: "17:30",

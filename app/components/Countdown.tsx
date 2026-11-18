@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const TARGET = new Date("2026-08-14T12:00:00+02:00").getTime();
+const TARGET = new Date("2027-08-14T12:00:00+02:00").getTime();
 
 function parts(now: number) {
   const diff = Math.max(0, TARGET - now);
@@ -23,7 +23,7 @@ const UNITS = [
 ] as const;
 
 /**
- * Live countdown to gates opening (Fri 14 Aug 2026, 12:00 CEST).
+ * Live countdown to gates opening (Sat 14 Aug 2027, 12:00 CEST).
  * Renders zeros until mounted so server and client HTML match.
  */
 export default function Countdown() {
@@ -43,14 +43,14 @@ export default function Countdown() {
       data-countdown
       className="flex flex-col gap-4 rounded-[2rem] border border-white/10 bg-[#160404] px-6 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8"
       role="timer"
-      aria-label="Countdown to Durora Music Festival 2026"
+      aria-label="Countdown to Durora Music Festival 2027"
     >
       <p className="text-center sm:text-left">
         <span className="block text-xs font-extrabold uppercase tracking-[0.3em] text-ember">
           Countdown to the first beat
         </span>
         <span className="mt-1 block text-sm font-semibold text-cream/70">
-          Gates open Friday 14 August 2026 · Berlin
+          Gates open Saturday 14 August 2027 · Berlin
         </span>
       </p>
       <div className="flex items-center justify-center gap-5 sm:gap-7">

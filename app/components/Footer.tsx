@@ -51,7 +51,7 @@ export default function Footer() {
               DUR<span className="text-ember">O</span>RA
             </p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-cream/65">
-              Durora Music Festival 2026 — Berlin, 14–16 August. Three days,
+              Durora Music Festival 2027 — Berlin, 14–16 August. Three days,
               five stages, 60+ artists.
             </p>
             <div className="mt-5 flex gap-2">
@@ -141,8 +141,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-cream/45 sm:flex-row">
-          <p>© 2026 Durora Music Festival. All rights reserved.</p>
-          <p>Berlin · 14–16 August 2026</p>
+          <p>© 2027 Durora Music Festival. All rights reserved.</p>
+          <p>Berlin · 14–16 August 2027</p>
         </div>
       </div>
     </footer>

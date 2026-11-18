@@ -83,7 +83,7 @@ export default function Hero() {
             delay={0.18}
             className="bg-gradient-to-r from-ember via-glow to-ember bg-clip-text text-[clamp(1.85rem,6.4vw,4.75rem)] tracking-wide text-transparent"
           >
-            MUSIC FESTIVAL 2026
+            MUSIC FESTIVAL 2027
           </TitleLine>
         </h1>
 

@@ -7,7 +7,7 @@ import Reveal from "./Reveal";
 import { ARTISTS } from "../data/artists";
 import { STAGES } from "../data/schedule";
 
-const DAYS = ["All", "Fri", "Sat", "Sun"] as const;
+const DAYS = ["All", "Sat", "Sun", "Mon"] as const;
 
 export default function LineupIndex() {
   const [day, setDay] = useState<(typeof DAYS)[number]>("All");

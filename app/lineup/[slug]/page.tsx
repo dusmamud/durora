@@ -20,7 +20,7 @@ export async function generateMetadata({
   if (!artist) return { title: "Artist not found" };
   return {
     title: artist.name,
-    description: `${artist.name} — ${artist.genre} at Durora 2026. ${artist.day}, ${artist.stage}, ${artist.time}. Berlin, 14–16 August.`,
+    description: `${artist.name} — ${artist.genre} at Durora 2027. ${artist.day}, ${artist.stage}, ${artist.time}. Berlin, 14–16 August.`,
     openGraph: {
       images: [{ url: artist.portrait, alt: artist.name }],
     },

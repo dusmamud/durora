@@ -8,7 +8,7 @@ import { SCHEDULE_DAYS, STAGES } from "../data/schedule";
 /** Full timetable with day tabs and a stage filter.
  * Reads from the same SCHEDULE_DAYS data as the home Schedule section. */
 export default function ScheduleTable() {
-  const [dayId, setDayId] = useState<string>("sat");
+  const [dayId, setDayId] = useState<string>("sun");
   const [stage, setStage] = useState<string>("All");
 
   const day = SCHEDULE_DAYS.find((d) => d.id === dayId) ?? SCHEDULE_DAYS[0];
@@ -44,7 +44,7 @@ export default function ScheduleTable() {
               onClick={() => setDayId(d.id)}
               className={pill(dayId === d.id)}
             >
-              Day {d.id === "fri" ? "1" : d.id === "sat" ? "2" : "3"} —{" "}
+              Day {d.id === "sat" ? "1" : d.id === "sun" ? "2" : "3"} —{" "}
               {d.label}
             </button>
           ))}

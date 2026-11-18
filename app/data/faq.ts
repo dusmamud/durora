@@ -4,8 +4,8 @@ export type FaqItem = { q: string; a: string };
  * plus the extended set below. */
 export const HOME_FAQ: FaqItem[] = [
   {
-    q: "When and where is Durora 2026?",
-    a: "14–16 August 2026 at Tempelhofer Feld, Berlin. Gates open at noon each day; music runs until 23:00.",
+    q: "When and where is Durora 2027?",
+    a: "14–16 August 2027 at Tempelhofer Feld, Berlin. Gates open at noon each day; music runs until 23:00.",
   },
   {
     q: "Is there an age limit?",
@@ -25,14 +25,14 @@ export const HOME_FAQ: FaqItem[] = [
   },
   {
     q: "Can I get a refund if I can't come?",
-    a: "Tickets are transferable to another person up to 7 days before the festival. Refunds are available until 31 July 2026.",
+    a: "Tickets are transferable to another person up to 7 days before the festival. Refunds are available until 31 July 2027.",
   },
 ];
 
 export const EXTENDED_FAQ: FaqItem[] = [
   {
     q: "Are tickets transferable?",
-    a: "Yes. You can transfer a ticket to another person free of charge up to 7 days before the festival (7 August 2026). The name on the ticket must match the ID shown at the gate.",
+    a: "Yes. You can transfer a ticket to another person free of charge up to 7 days before the festival (7 August 2027). The name on the ticket must match the ID shown at the gate.",
   },
   {
     q: "Is there camping on site?",

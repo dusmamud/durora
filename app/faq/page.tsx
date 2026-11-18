@@ -8,7 +8,7 @@ import { ALL_FAQ } from "../data/faq";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Durora 2026 FAQ: dates and place, age policy, food and drink, rain, transport, refunds, camping, accessibility, ticket transfers and contact.",
+    "Durora 2027 FAQ: dates and place, age policy, food and drink, rain, transport, refunds, camping, accessibility, ticket transfers and contact.",
 };
 
 export default function FaqPage() {

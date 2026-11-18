@@ -1,6 +1,6 @@
-# Durora Music Festival 2026
+# Durora Music Festival 2027
 
-Static landing site for **Durora Music Festival 2026** — Berlin, 14–16 August 2026.
+Static landing site for **Durora Music Festival 2027** — Berlin, 14–16 August 2027.
 3 days, 5 stages, 60+ artists, 20,000 guests. Featured artist: Sofia Lane.
 
 ## Stack

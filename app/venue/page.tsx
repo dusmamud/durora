@@ -8,7 +8,7 @@ import Reveal from "../components/Reveal";
 export const metadata: Metadata = {
   title: "Venue",
   description:
-    "Durora 2026 takes place at Tempelhofer Feld, Berlin — a former airfield turned open park. How to get there, gates, entry and the no-camping note.",
+    "Durora 2027 takes place at Tempelhofer Feld, Berlin — a former airfield turned open park. How to get there, gates, entry and the no-camping note.",
 };
 
 const TRANSPORT = [
@@ -40,7 +40,7 @@ export default function VenuePage() {
       <PageHero
         eyebrow="Venue"
         title="TEMPELHOFER FELD"
-        description="A former airfield turned into Berlin's biggest open park — wide skies, flat ground, and five stages under them. 14–16 August 2026."
+        description="A former airfield turned into Berlin's biggest open park — wide skies, flat ground, and five stages under them. 14–16 August 2027."
         crumb="Venue"
       />
       <section className="mx-auto max-w-6xl px-4 sm:px-6">

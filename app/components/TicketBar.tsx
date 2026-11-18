@@ -35,7 +35,7 @@ export default function TicketBar() {
     >
       <div className="mx-auto flex max-w-3xl items-center justify-between gap-3 rounded-full border border-white/10 bg-[#2a0a0a]/95 py-2 pl-5 pr-2 shadow-2xl shadow-black/60 backdrop-blur-md sm:pl-6">
         <p className="min-w-0 truncate text-xs font-bold text-cream sm:text-sm">
-          Durora — 14–16 Aug 2026 · Berlin
+          Durora — 14–16 Aug 2027 · Berlin
         </p>
         <div className="flex shrink-0 items-center gap-3">
           <span className="text-xs font-bold text-glow sm:text-sm">

@@ -5,7 +5,7 @@ import ScheduleTable from "../components/ScheduleTable";
 export const metadata: Metadata = {
   title: "Schedule",
   description:
-    "The full Durora 2026 timetable: day-by-day sets across 5 stages at Tempelhofer Feld, Berlin, 14–16 August. Filter by day or stage.",
+    "The full Durora 2027 timetable: day-by-day sets across 5 stages at Tempelhofer Feld, Berlin, 14–16 August. Filter by day or stage.",
 };
 
 export default function SchedulePage() {

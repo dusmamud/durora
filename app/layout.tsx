@@ -23,17 +23,17 @@ const SITE_URL = "https://durora.pages.dev";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Durora Music Festival 2026 | Berlin, 14–16 August",
-    template: "%s | Durora Music Festival 2026",
+    default: "Durora Music Festival 2027 | Berlin, 14–16 August",
+    template: "%s | Durora Music Festival 2027",
   },
   description:
-    "Durora is a three-day music festival in Berlin, 14–16 August 2026. 60+ artists, 5 stages, electronic music, art installations and light shows — featuring Sofia Lane.",
+    "Durora is a three-day music festival in Berlin, 14–16 August 2027. 60+ artists, 5 stages, electronic music, art installations and light shows — featuring Sofia Lane.",
   keywords: [
     "Durora",
     "music festival",
     "Berlin festival",
     "Sofia Lane",
-    "August 2026",
+    "August 2027",
     "electronic music",
     "Tempelhofer Feld",
   ],
@@ -45,21 +45,21 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "Durora Music Festival",
-    title: "Durora Music Festival 2026 | Berlin, 14–16 August",
+    title: "Durora Music Festival 2027 | Berlin, 14–16 August",
     description:
-      "Three days, five stages, 60+ artists in Berlin. Featuring Sofia Lane. 14–16 August 2026.",
+      "Three days, five stages, 60+ artists in Berlin. Featuring Sofia Lane. 14–16 August 2027.",
     images: [
       {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Durora Music Festival 2026 — Berlin at sunset",
+        alt: "Durora Music Festival 2027 — Berlin at sunset",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Durora Music Festival 2026 | Berlin, 14–16 August",
+    title: "Durora Music Festival 2027 | Berlin, 14–16 August",
     description:
       "Three days, five stages, 60+ artists in Berlin. Featuring Sofia Lane.",
     images: ["/og.jpg"],
@@ -79,9 +79,9 @@ export const viewport: Viewport = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MusicEvent",
-  name: "Durora Music Festival 2026",
-  startDate: "2026-08-14T12:00:00+02:00",
-  endDate: "2026-08-16T23:00:00+02:00",
+  name: "Durora Music Festival 2027",
+  startDate: "2027-08-14T12:00:00+02:00",
+  endDate: "2027-08-16T23:00:00+02:00",
   eventStatus: "https://schema.org/EventScheduled",
   location: {
     "@type": "Place",

@@ -6,7 +6,7 @@ import Reveal from "../components/Reveal";
 export const metadata: Metadata = {
   title: "Terms & Conditions",
   description:
-    "Durora 2026 ticket terms: demo purchases, refunds and transfers, age and entry rules, and what happens if the festival is cancelled or rescheduled.",
+    "Durora 2027 ticket terms: demo purchases, refunds and transfers, age and entry rules, and what happens if the festival is cancelled or rescheduled.",
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -26,7 +26,7 @@ export default function TermsPage() {
       <PageHero
         eyebrow="Terms"
         title="TERMS & CONDITIONS"
-        description="The rules for Durora 2026 tickets and entry. Last updated 17 November 2026."
+        description="The rules for Durora 2027 tickets and entry. Last updated 18 November 2026."
         crumb="Terms"
       />
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
@@ -48,13 +48,13 @@ export default function TermsPage() {
             <p>
               The name on the ticket must match a photo ID shown at the gate.
               Tickets are transferable to another person free of charge up to
-              7 days before the festival (7 August 2026).
+              7 days before the festival (7 August 2027).
             </p>
           </Section>
 
           <Section title="2. Refunds">
             <p>
-              Refunds are available until 31 July 2026. After that date,
+              Refunds are available until 31 July 2027. After that date,
               tickets are non-refundable except as described below. Refund
               requests go to{" "}
               <a href="mailto:hello@durora.live" className="font-bold text-glow hover:underline">
@@ -63,7 +63,7 @@ export default function TermsPage() {
               .
             </p>
             <p>
-              If Durora 2026 is cancelled, all ticket holders receive a full
+              If Durora 2027 is cancelled, all ticket holders receive a full
               refund. If the festival is rescheduled, tickets remain valid
               for the new dates, or a refund may be requested within 30 days
               of the announcement.

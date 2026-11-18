@@ -25,7 +25,7 @@ export default function PrivacyPage() {
       <PageHero
         eyebrow="Privacy"
         title="PRIVACY POLICY"
-        description="What this demo site collects — essentially nothing. Last updated 17 November 2026."
+        description="What this demo site collects — essentially nothing. Last updated 18 November 2026."
         crumb="Privacy"
       />
       <div className="mx-auto max-w-3xl px-4 sm:px-6">

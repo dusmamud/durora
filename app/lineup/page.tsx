@@ -6,13 +6,13 @@ import { ARTISTS } from "../data/artists";
 export const metadata: Metadata = {
   title: "Lineup",
   description:
-    "The Durora 2026 lineup: Sofia Lane headlines Saturday, with Nova Rey, Kairo, Luna Mara, Felix Brandt and Amara Sol across 5 stages in Berlin, 14–16 August.",
+    "The Durora 2027 lineup: Sofia Lane headlines Sunday, with Nova Rey, Kairo, Luna Mara, Felix Brandt and Amara Sol across 5 stages in Berlin, 14–16 August.",
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Durora 2026 lineup",
+  name: "Durora 2027 lineup",
   itemListElement: ARTISTS.map((a, i) => ({
     "@type": "ListItem",
     position: i + 1,
@@ -35,7 +35,7 @@ export default function LineupPage() {
       <PageHero
         eyebrow="Lineup"
         title="THE LINEUP"
-        description="Six acts announced so far — Sofia Lane headlines Saturday night. Filter by day or stage to plan your weekend."
+        description="Six acts announced so far — Sofia Lane headlines Sunday night. Filter by day or stage to plan your weekend."
         crumb="Lineup"
       />
       <LineupIndex />

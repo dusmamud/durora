@@ -16,7 +16,7 @@ import Reveal from "../components/Reveal";
 export const metadata: Metadata = {
   title: "Practical Info",
   description:
-    "Practical info for Durora 2026: getting there, food & drink, what to bring, what is not allowed, accessibility, age policy, cashless payment and safety.",
+    "Practical info for Durora 2027: getting there, food & drink, what to bring, what is not allowed, accessibility, age policy, cashless payment and safety.",
 };
 
 const SECTIONS = [

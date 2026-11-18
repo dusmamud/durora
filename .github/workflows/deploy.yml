@@ -1,6 +1,6 @@
 name: Deploy to Cloudflare Pages
 
-# Durora Music Festival 2026 — Next.js 16 + React 19 + Tailwind 4, static export.
+# Durora Music Festival 2027 — Next.js 16 + React 19 + Tailwind 4, static export.
 # Build + check on every push / PR to main. Deploy to Cloudflare Pages only
 # after the build job passes, and only on push to main. Deploy uses the
 # pre-built `out/` output from the build job, so exactly what was tested
