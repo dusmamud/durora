@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    // lucide-react is a barrel import; only bundle the icons actually used.
+    optimizePackageImports: ["lucide-react"],
+  },
 };
 
 export default nextConfig;
