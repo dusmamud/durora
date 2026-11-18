@@ -1,0 +1,9 @@
+# Cloudflare Pages cache headers for Durora (static export).
+# HTML keeps the default (max-age=0, must-revalidate) — no rule here.
+# Only immutable hashed bundles and versioned images get long caches.
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=86400

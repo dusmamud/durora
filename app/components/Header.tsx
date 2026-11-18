@@ -60,7 +60,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link
             href="/tickets"
-            className="hidden items-center gap-2 rounded-full bg-ember px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-ember-deep sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full bg-ember-btn px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-ember-deep sm:inline-flex"
           >
             <Ticket className="h-4 w-4" aria-hidden />
             Get Tickets
@@ -100,7 +100,7 @@ export default function Header() {
             <Link
               href="/tickets"
               onClick={() => setOpen(false)}
-              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-ember px-4 py-3 text-base font-bold text-white"
+              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-ember-btn px-4 py-3 text-base font-bold text-white"
             >
               <Ticket className="h-5 w-5" aria-hidden />
               Get Tickets

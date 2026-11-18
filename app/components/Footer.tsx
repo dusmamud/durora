@@ -125,14 +125,13 @@ export default function Footer() {
                   />
                   <button
                     type="submit"
-                    aria-label="Subscribe"
-                    className="flex shrink-0 items-center gap-1.5 bg-ember px-4 text-sm font-bold text-white transition-colors hover:bg-ember-deep"
+                    className="flex shrink-0 items-center gap-1.5 bg-ember-btn px-4 text-sm font-bold text-white transition-colors hover:bg-ember-deep"
                   >
                     <Send className="h-4 w-4" aria-hidden />
                     Join
                   </button>
                 </div>
-                <p className="mt-2 text-xs text-cream/45">
+                <p className="mt-2 text-xs text-cream/60">
                   One email a month. No spam, unsubscribe anytime.
                 </p>
               </form>
@@ -140,7 +139,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-cream/45 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-cream/60 sm:flex-row">
           <p>© 2027 Durora Music Festival. All rights reserved.</p>
           <p>Berlin · 14–16 August 2027</p>
         </div>

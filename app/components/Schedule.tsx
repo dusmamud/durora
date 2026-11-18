@@ -32,7 +32,7 @@ export default function Schedule() {
                 onClick={() => setActive(d.id)}
                 className={`whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-bold transition-colors ${
                   active === d.id
-                    ? "bg-ember text-white"
+                    ? "bg-ember-btn text-white"
                     : "border border-white/20 text-cream/80 hover:border-glow hover:text-glow"
                 }`}
               >

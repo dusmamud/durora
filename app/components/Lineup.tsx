@@ -27,6 +27,7 @@ export default function Lineup() {
                 src={HEADLINER.portrait}
                 alt={`${HEADLINER.name} — ${HEADLINER.genre}`}
                 fill
+                fetchPriority="high"
                 sizes="(max-width: 1024px) 100vw, 66vw"
                 className="object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
               />
@@ -43,7 +44,7 @@ export default function Lineup() {
                 </p>
                 <a
                   href="#artist"
-                  className="mt-5 inline-block rounded-full bg-cream px-5 py-2.5 text-sm font-bold text-ember-deep transition-transform hover:scale-[1.03]"
+                  className="mt-5 inline-block rounded-full bg-cream px-5 py-2.5 text-sm font-bold text-ember-ink transition-transform hover:scale-[1.03]"
                 >
                   Meet Sofia →
                 </a>

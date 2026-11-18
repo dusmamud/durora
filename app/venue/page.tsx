@@ -3,7 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Bus, MapPin, Tent, TrainFront, Bike, Clock } from "lucide-react";
 import PageHero from "../components/PageHero";
+import JsonLd from "../components/JsonLd";
 import Reveal from "../components/Reveal";
+import { ARTISTS } from "../data/artists";
+import { musicEventJsonLd } from "../lib/event-jsonld";
 
 export const metadata: Metadata = {
   title: "Venue",
@@ -37,6 +40,7 @@ const TRANSPORT = [
 export default function VenuePage() {
   return (
     <div className="bg-wine pb-20">
+      <JsonLd data={musicEventJsonLd(ARTISTS)} />
       <PageHero
         eyebrow="Venue"
         title="TEMPELHOFER FELD"
@@ -50,9 +54,9 @@ export default function VenuePage() {
               src="/images/venue.webp"
               alt="Tempelhofer Feld, the Durora festival site in Berlin"
               fill
+              fetchPriority="high"
               sizes="(max-width: 1024px) 100vw, 1152px"
               className="object-cover"
-              priority
             />
           </div>
           <div className="mt-4 flex flex-wrap items-center gap-3">
@@ -60,7 +64,7 @@ export default function VenuePage() {
               href="https://www.google.com/maps/search/?api=1&query=Tempelhofer+Feld+Berlin"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-ember px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-ember-deep"
+              className="inline-flex items-center gap-2 rounded-full bg-ember-btn px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-ember-deep"
             >
               <MapPin className="h-4 w-4" aria-hidden />
               Open in Google Maps

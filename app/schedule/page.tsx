@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import PageHero from "../components/PageHero";
+import JsonLd from "../components/JsonLd";
 import ScheduleTable from "../components/ScheduleTable";
+import { ARTISTS } from "../data/artists";
+import { musicEventJsonLd } from "../lib/event-jsonld";
 
 export const metadata: Metadata = {
   title: "Schedule",
@@ -11,6 +14,7 @@ export const metadata: Metadata = {
 export default function SchedulePage() {
   return (
     <div className="bg-wine pb-20">
+      <JsonLd data={musicEventJsonLd(ARTISTS)} />
       <PageHero
         eyebrow="Schedule"
         title="TIMETABLE"

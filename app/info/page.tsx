@@ -11,7 +11,10 @@ import {
   Users,
 } from "lucide-react";
 import PageHero from "../components/PageHero";
+import JsonLd from "../components/JsonLd";
 import Reveal from "../components/Reveal";
+import { ARTISTS } from "../data/artists";
+import { musicEventJsonLd } from "../lib/event-jsonld";
 
 export const metadata: Metadata = {
   title: "Practical Info",
@@ -66,6 +69,7 @@ const SECTIONS = [
 export default function InfoPage() {
   return (
     <div className="bg-wine pb-20">
+      <JsonLd data={musicEventJsonLd(ARTISTS)} />
       <PageHero
         eyebrow="Practical info"
         title="GOOD TO KNOW"

@@ -6,6 +6,12 @@
   --color-wine-soft: #3d0f0f;
   --color-ember: #ff5a1f;
   --color-ember-deep: #e8440c;
+  /* WCAG AA contrast variants — same hue, darker lightness only.
+     ember-btn: white text on it = 4.52:1 (use for white-on-orange
+     buttons/badges/pills). ember-ink: on cream = 4.52:1 (use for
+     orange text on cream pills). */
+  --color-ember-btn: #dc3a00;
+  --color-ember-ink: #cd3c0b;
   --color-glow: #ffb347;
   --color-cream: #fff3e6;
   --color-cream-dim: #f5d9c2;

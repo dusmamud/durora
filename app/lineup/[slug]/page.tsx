@@ -3,8 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import PageHero from "../../components/PageHero";
+import JsonLd from "../../components/JsonLd";
 import Reveal from "../../components/Reveal";
 import { ARTISTS, getArtist } from "../../data/artists";
+import { musicEventJsonLd } from "../../lib/event-jsonld";
 
 export function generateStaticParams() {
   return ARTISTS.map((a) => ({ slug: a.slug }));
@@ -40,6 +42,7 @@ export default async function ArtistPage({
 
   return (
     <div className="bg-wine pb-20">
+      <JsonLd data={musicEventJsonLd([artist])} />
       <PageHero
         eyebrow="Artist"
         title={artist.name.toUpperCase()}
@@ -54,16 +57,16 @@ export default async function ArtistPage({
                 src={artist.portrait}
                 alt={`${artist.name} — ${artist.genre}`}
                 fill
+                fetchPriority="high"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-top"
-                priority
               />
             </div>
           </Reveal>
           <Reveal delay={0.1}>
             <div className="flex h-full flex-col justify-center">
               {artist.headliner && (
-                <span className="mb-4 w-fit rounded-full bg-ember px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white">
+                <span className="mb-4 w-fit rounded-full bg-ember-btn px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white">
                   Headliner
                 </span>
               )}
@@ -103,7 +106,7 @@ export default async function ArtistPage({
                 </Link>
                 <Link
                   href="/tickets"
-                  className="rounded-full bg-ember px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-ember-deep"
+                  className="rounded-full bg-ember-btn px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-ember-deep"
                 >
                   Get tickets
                 </Link>

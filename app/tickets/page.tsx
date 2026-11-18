@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "../components/PageHero";
+import JsonLd from "../components/JsonLd";
 import Reveal from "../components/Reveal";
 import TicketPicker from "../components/TicketPicker";
+import { ARTISTS } from "../data/artists";
+import { musicEventJsonLd } from "../lib/event-jsonld";
 
 export const metadata: Metadata = {
   title: "Tickets",
@@ -13,6 +16,7 @@ export const metadata: Metadata = {
 export default function TicketsPage() {
   return (
     <div className="bg-wine pb-20">
+      <JsonLd data={musicEventJsonLd(ARTISTS)} />
       <PageHero
         eyebrow="Tickets"
         title="GET YOUR TICKETS"
@@ -24,7 +28,7 @@ export default function TicketsPage() {
         <Reveal className="mt-10">
           <div className="grid gap-4 md:grid-cols-3">
             <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
-              <h2 className="font-display text-xl text-cream">REFUNDS</h2>
+              <h3 className="font-display text-xl text-cream">REFUNDS</h3>
               <p className="mt-2 text-sm leading-relaxed text-cream/70">
                 Refunds are available until 31 July 2027. Tickets are
                 transferable to another person up to 7 days before the
@@ -32,14 +36,14 @@ export default function TicketsPage() {
               </p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
-              <h2 className="font-display text-xl text-cream">AT THE GATE</h2>
+              <h3 className="font-display text-xl text-cream">AT THE GATE</h3>
               <p className="mt-2 text-sm leading-relaxed text-cream/70">
                 Bring the ticket (phone or printout) and a photo ID matching
                 the name on it. Gates open at noon each day.
               </p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
-              <h2 className="font-display text-xl text-cream">UNDER-16S</h2>
+              <h3 className="font-display text-xl text-cream">UNDER-16S</h3>
               <p className="mt-2 text-sm leading-relaxed text-cream/70">
                 Under-16s need to be accompanied by an adult after 20:00.
                 See the{" "}

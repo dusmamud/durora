@@ -10,6 +10,9 @@ import Schedule from "./components/Schedule";
 import Tickets from "./components/Tickets";
 import Place from "./components/Place";
 import Faq from "./components/Faq";
+import JsonLd from "./components/JsonLd";
+import { ARTISTS } from "./data/artists";
+import { musicEventJsonLd } from "./lib/event-jsonld";
 
 /** One rounded card on the dark brown outer frame, like the reference. */
 function Card({ children }: { children: ReactNode }) {
@@ -19,6 +22,7 @@ function Card({ children }: { children: ReactNode }) {
 export default function Home() {
   return (
     <div className="bg-[#20100c] px-3 py-3 sm:px-5 sm:py-5">
+      <JsonLd data={musicEventJsonLd(ARTISTS)} />
       <div className="mx-auto flex max-w-[1440px] flex-col gap-4 sm:gap-5">
         <Card>
           <Hero />

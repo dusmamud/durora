@@ -76,47 +76,12 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "MusicEvent",
-  name: "Durora Music Festival 2027",
-  startDate: "2027-08-14T12:00:00+02:00",
-  endDate: "2027-08-16T23:00:00+02:00",
-  eventStatus: "https://schema.org/EventScheduled",
-  location: {
-    "@type": "Place",
-    name: "Tempelhofer Feld",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Berlin",
-      addressCountry: "DE",
-    },
-  },
-  performer: {
-    "@type": "MusicGroup",
-    name: "Sofia Lane",
-  },
-  offers: {
-    "@type": "Offer",
-    price: "69",
-    priceCurrency: "EUR",
-    availability: "https://schema.org/InStock",
-    url: `${SITE_URL}/#tickets`,
-  },
-  description:
-    "A three-day music festival in Berlin combining electronic music, art installations, and light shows. 60+ artists across 5 stages.",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${anton.variable} ${inter.variable}`}>
       <body className="bg-[#20100c] font-sans text-cream antialiased">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
         <SmoothScroll />
         <Header />
         <main>{children}</main>

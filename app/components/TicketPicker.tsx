@@ -55,11 +55,11 @@ export default function TicketPicker() {
               }`}
             >
               {t.featured && (
-                <span className="mb-3 w-fit rounded-full bg-ember px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white">
+                <span className="mb-3 w-fit rounded-full bg-ember-btn px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white">
                   Most popular
                 </span>
               )}
-              <h3 className="font-display text-3xl text-cream">{t.name}</h3>
+              <h2 className="font-display text-3xl text-cream">{t.name}</h2>
               <p className="mt-1 text-cream/70">{t.blurb}</p>
               <p className="mt-4">
                 <span className="font-display text-5xl text-cream">
@@ -117,7 +117,7 @@ export default function TicketPicker() {
             type="button"
             onClick={confirm}
             disabled={count === 0}
-            className="inline-flex items-center gap-2 rounded-full bg-ember px-7 py-3.5 text-sm font-extrabold uppercase tracking-wider text-white transition-transform hover:scale-[1.03] disabled:cursor-not-allowed disabled:opacity-40"
+            className="inline-flex items-center gap-2 rounded-full bg-ember-btn px-7 py-3.5 text-sm font-extrabold uppercase tracking-wider text-white transition-transform hover:scale-[1.03] disabled:cursor-not-allowed disabled:opacity-40"
           >
             <Ticket className="h-4 w-4" aria-hidden />
             {confirmed ? "Booked (demo)" : "Reserve tickets"}

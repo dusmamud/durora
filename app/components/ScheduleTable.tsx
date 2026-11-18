@@ -23,7 +23,7 @@ export default function ScheduleTable() {
   const pill = (active: boolean) =>
     `whitespace-nowrap rounded-full px-4 py-2 text-sm font-bold transition-colors ${
       active
-        ? "bg-ember text-white"
+        ? "bg-ember-btn text-white"
         : "border border-white/20 text-cream/80 hover:border-glow hover:text-glow"
     }`;
 

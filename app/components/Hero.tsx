@@ -47,7 +47,7 @@ export default function Hero() {
           src="/images/hero-stage.webp"
           alt=""
           fill
-          priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover opacity-25"
         />
@@ -96,7 +96,7 @@ export default function Hero() {
           <Magnetic>
             <Link
               href="#tickets"
-              className="inline-block rounded-full bg-cream px-8 py-3.5 text-sm font-extrabold uppercase tracking-wider text-ember-deep shadow-xl shadow-black/40 transition-transform hover:scale-[1.03] active:scale-[0.98]"
+              className="inline-block rounded-full bg-cream px-8 py-3.5 text-sm font-extrabold uppercase tracking-wider text-ember-ink shadow-xl shadow-black/40 transition-transform hover:scale-[1.03] active:scale-[0.98]"
             >
               Get Tickets
             </Link>
